@@ -8,8 +8,8 @@
 #       DESENVOLVIMENTO.: JUAREZ NASATO                              #
 #       EMAIL.: JUAREZNASATO@GMAIL.COM                               #
 #       DATA CRIACAO.: 11/05/2019                                    #
-#       VERSAO.: 0.0.1                      					     #
-#        		                                                     #
+#       VERSAO.: 0.0.1                                               #
+#                                                                    #
 ######################################################################
 #
 # --> COMANDOS <--

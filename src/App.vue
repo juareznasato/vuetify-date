@@ -14,12 +14,13 @@ export default {
     VuetifyDate
   },
   data: () => ({
-    value: 1557673468418, // 12/05/2019 12:04:28
+    value: 1577239200000, //1557673468418, // 12/05/2019 12:04:28
     // value:1557630000000, // 12/05/2019
     label: "Data",
     config: {
       locale: "pt-BR",
-      format: "DD/MM/YYYY"
+      format: "DD/MM/YYYY",
+      clearable: true
     }
   })
 };
