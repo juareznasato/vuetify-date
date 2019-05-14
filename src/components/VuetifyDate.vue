@@ -5,22 +5,26 @@
         <v-menu
           v-model="menu"
           v-bind:close-on-content-click="false"
+          v-bind:nudge-right="40"
+          lazy
+          transition="scale-transition"
           offset-y
           full-width
           max-width="290"
+          min-width="290px"
           data-app="true"
         >
           <v-text-field
-            slot="activator"
-            prepend-icon="event"
             v-model="compShow"
             v-bind:readonly="readonly"
             v-bind:clearable="config.clearable"
             v-bind:label="label"
+            slot="activator"
+            prepend-icon="event"
           ></v-text-field>
           <v-date-picker
             v-model="modDate"
-            v-on:change="(menu = false), emit()"
+            v-on:input="(menu = false), emit()"
             v-bind:locale="config.locale"
             no-title
           ></v-date-picker>
@@ -77,6 +81,7 @@ export default {
     }
   },
   watch: {
+    // When computed.compShow.modDateFormatted is changed:
     modDateFormatted() {
       return this.value
         ? (this.modDate = moment(new Date(this.value)).format("YYYY-MM-DD"))
@@ -94,7 +99,6 @@ export default {
 };
 // Str to milli
 // var d = Date.parse(date);
-// Transformar em data
 // milli to date
 // this.date = new Date(d);
 </script>
