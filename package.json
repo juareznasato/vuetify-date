@@ -1,7 +1,23 @@
 {
   "name": "vuetify-date",
   "version": "0.1.0",
-  "private": true,
+  "description": "Simple Date component to vuetify.",
+  "author": {
+    "name": "Juarez Nasato",
+    "email": "juareznasato@gmail.com"
+  },
+  "keywords": [
+    "vuejs",
+    "vuetify",
+    "v-text-field",
+    "date",
+    "millisecond"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juareznasato/vuetify-date.git"
+  },
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -13,14 +29,10 @@
     "vue": "^2.6.10",
     "vuetify": "^1.5.14"
   },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.7.0",
-    "@vue/cli-plugin-eslint": "^3.7.0",
-    "@vue/cli-service": "^3.7.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.21"
-  }
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "readmeFilename": "README.md",
+  "main": "index.js"
 }

@@ -1,29 +1,76 @@
-# vuetify-date
+# vuetify-money
 
-## Project setup
-```
-npm install
-```
+This component works with v-text-field (vuetify).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+v-text-field
+14/05/2019 or others formats.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+v-model parent (millisecond)
+1557802800000
 
-### Run your tests
-```
-npm run test
-```
+## Features
 
-### Lints and fixes files
-```
-npm run lint
-```
+- Vuetify Dependency
+- Works fine with Chrome and Firefox. Others not tested.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Usage:
+
+### Globally
+```
+Install:
+$ npm install vuetify-date --save
+
+Register component:
+import Vue from "vue";
+import VuetifyDate from "vuetify-date";
+Vue.use(VuetifyDate);
+export default VuetifyDate;
+
+Parent component:
+<template>
+  <div>
+    <VuetifyDate v-model="value" v-bind:label="label" v-bind:config="config"/>
+    v-model parent: {{ value }}
+  </div>
+</template>
+<script>
+export default {
+  data: () => ({
+    value: "1557802800000",
+    label: "Date",
+    config: {
+      locale: "pt-BR",
+      format: "DD/MM/YYYY",
+      clearable: true
+    }
+  })
+};
+</script>
+
+```
+### As component
+```
+<template>
+  <div>
+    <VuetifyDate v-model="value" v-bind:label="label" v-bind:config="config"/>
+    v-model parent: {{ value }}
+  </div>
+</template>
+<script>
+import VuetifyDate from "@/components/VuetifyDate.vue";
+export default {
+  components: {
+    VuetifyDate
+  },
+  data: () => ({
+    value: "1557802800000",
+    label: "Date",
+    config: {
+      locale: "pt-BR",
+      format: "DD/MM/YYYY",
+      clearable: true
+    }
+  })
+};
+</script>
+```
