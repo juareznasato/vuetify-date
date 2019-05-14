@@ -14,16 +14,12 @@
             slot="activator"
             prepend-icon="event"
             v-model="compShow"
+            v-bind:value="compValue"
             v-bind:readonly="readonly"
             v-bind:clearable="config.clearable"
             v-bind:label="label"
           ></v-text-field>
-          <v-date-picker
-            v-model="modDate"
-            v-on:change="(menu = false), emit()"
-            v-bind:locale="config.locale"
-            no-title
-          ></v-date-picker>
+          <v-date-picker v-model="modDate" @change="menu=false, emit()" v-bind:locale="config.locale" no-title></v-date-picker>
         </v-menu>
       </v-flex>
     </v-layout>
@@ -59,28 +55,21 @@ export default {
     readonly: true
   }),
   computed: {
+    compValue() {
+      const THIS = this;
+      return this.value ? THIS.modDate = moment(new Date(this.value)).format("YYYY-MM-DD") : null;
+    },
     compShow: {
-      get: function() {
+      get: function () {
         const THIS = this;
-        return this.value
-          ? (THIS.modDateFormatted = moment(new Date(this.value)).format(
-              this.config.format
-            ))
-          : null;
+        return this.value ? THIS.modDateFormatted = moment(new Date(this.value)).format(this.config.format) : null;
       },
-      set: function() {
+      set: function () {
         const THIS = this;
-        THIS.modDate = null;
         THIS.modDateFormatted = null;
+        THIS.modDate = null;
         this.$emit("input", null);
       }
-    }
-  },
-  watch: {
-    modDateFormatted() {
-      return this.value
-        ? (this.modDate = moment(new Date(this.value)).format("YYYY-MM-DD"))
-        : null;
     }
   },
   methods: {
