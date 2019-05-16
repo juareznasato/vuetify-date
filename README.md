@@ -1,4 +1,4 @@
-# vuetify-money
+# vuetify-date
 
 This component works with v-text-field (vuetify).
 
