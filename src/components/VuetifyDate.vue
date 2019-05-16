@@ -1,36 +1,32 @@
 <template>
   <div>
-    <v-layout row>
-      <v-flex xs12 sm6 md4>
-        <v-menu
-          v-model="menu"
-          v-bind:close-on-content-click="false"
-          v-bind:nudge-right="40"
-          lazy
-          transition="scale-transition"
-          offset-y
-          full-width
-          max-width="290"
-          min-width="290px"
-          data-app="true"
-        >
-          <v-text-field
-            v-model="compShow"
-            v-bind:readonly="readonly"
-            v-bind:clearable="config.clearable"
-            v-bind:label="label"
-            slot="activator"
-            prepend-icon="event"
-          ></v-text-field>
-          <v-date-picker
-            v-model="modDate"
-            v-on:input="(menu = false), emit()"
-            v-bind:locale="config.locale"
-            no-title
-          ></v-date-picker>
-        </v-menu>
-      </v-flex>
-    </v-layout>
+    <v-menu
+      v-model="menu"
+      v-bind:close-on-content-click="false"
+      v-bind:nudge-right="40"
+      lazy
+      transition="scale-transition"
+      offset-y
+      full-width
+      max-width="290"
+      min-width="290px"
+      data-app="true"
+    >
+      <v-text-field
+        v-model="compShow"
+        v-bind:readonly="readonly"
+        v-bind:clearable="config.clearable"
+        v-bind:label="label"
+        slot="activator"
+        prepend-icon="event"
+      ></v-text-field>
+      <v-date-picker
+        v-model="modDate"
+        v-on:input="(menu = false), emit()"
+        v-bind:locale="config.locale"
+        no-title
+      ></v-date-picker>
+    </v-menu>
   </div>
 </template>
 

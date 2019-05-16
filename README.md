@@ -10,7 +10,8 @@ v-model parent (millisecond)
 
 ## Features
 
-- Vuetify Dependency
+- Vuetify dependency
+- moment dependency
 - Works fine with Chrome and Firefox. Others not tested.
 
 ## Usage:
@@ -29,7 +30,7 @@ export default VuetifyDate;
 Parent component:
 <template>
   <div>
-    <VuetifyDate v-model="value" v-bind:label="label" v-bind:config="config"/>
+    <vuetify-date v-model="value" v-bind:label="label" v-bind:config="config"/>
     v-model parent: {{ value }}
   </div>
 </template>
