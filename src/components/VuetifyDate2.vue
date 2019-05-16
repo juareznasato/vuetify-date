@@ -49,7 +49,7 @@ export default {
   },
   data: () => ({
     modDate: "",
-    modDateFormatted: "",
+    modFormattedDate: "",
     time: "00:00:00",
     menu: false,
     readonly: true
@@ -62,11 +62,11 @@ export default {
     compShow: {
       get: function () {
         const THIS = this;
-        return this.value ? THIS.modDateFormatted = moment(new Date(this.value)).format(this.config.format) : null;
+        return this.value ? THIS.modFormattedDate = moment(new Date(this.value)).format(this.config.format) : null;
       },
       set: function () {
         const THIS = this;
-        THIS.modDateFormatted = null;
+        THIS.modFormattedDate = null;
         THIS.modDate = null;
         this.$emit("input", null);
       }

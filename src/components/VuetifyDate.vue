@@ -57,7 +57,7 @@ export default {
   },
   data: () => ({
     modDate: "",
-    modDateFormatted: "",
+    modFormattedDate: "",
     time: "00:00:00",
     menu: false,
     readonly: true
@@ -67,7 +67,7 @@ export default {
       get: function() {
         const THIS = this;
         return this.value
-          ? (THIS.modDateFormatted = moment(new Date(this.value)).format(
+          ? (THIS.modFormattedDate = moment(new Date(this.value)).format(
               this.config.format
             ))
           : null;
@@ -75,14 +75,14 @@ export default {
       set: function() {
         const THIS = this;
         THIS.modDate = null;
-        THIS.modDateFormatted = null;
+        THIS.modFormattedDate = null;
         this.$emit("input", null);
       }
     }
   },
   watch: {
-    // When computed.compShow.modDateFormatted is changed:
-    modDateFormatted() {
+    // When computed.compShow.modFormattedDate is changed:
+    modFormattedDate() {
       return this.value
         ? (this.modDate = moment(new Date(this.value)).format("YYYY-MM-DD"))
         : null;

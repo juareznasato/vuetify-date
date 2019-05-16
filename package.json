@@ -23,12 +23,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "moment": "^2.24.0",
-    "vue": "^2.6.10",
-    "vuetify": "^1.5.14"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=0.8.0"
