@@ -1,12 +1,16 @@
 # vuetify-date
 
-This component works with v-text-field (vuetify).
+This component works with vuetify. It uses v-text-field and v-date-picker.
 
 v-text-field
-14/05/2019 or others formats.
+- 14/05/2019
+- Locale allows you to define other date formats.
 
-v-model parent (millisecond)
+v-model parent (input and output in milliseconds)
 1557802800000
+
+if you want a datetime component, please, try this:
+https://github.com/juareznasato/vuetify-datetime.git
 
 ## Features
 
@@ -14,9 +18,9 @@ v-model parent (millisecond)
 - moment dependency
 - Works fine with Chrome and Firefox. Others not tested.
 
-## Usage:
+## Usage
 
-### Globally
+### Globally:
 ```
 Install:
 $ npm install vuetify-date --save
@@ -41,7 +45,7 @@ export default {
     label: "Date",
     config: {
       locale: "pt-BR",
-      format: "DD/MM/YYYY",
+      format: "DD/MM/YYYY",     - Date format only. Do not include the time format here.
       clearable: true
     }
   })
@@ -49,7 +53,7 @@ export default {
 </script>
 
 ```
-### As component
+### As component:
 ```
 <template>
   <div>
@@ -68,7 +72,7 @@ export default {
     label: "Date",
     config: {
       locale: "pt-BR",
-      format: "DD/MM/YYYY",
+      format: "DD/MM/YYYY",     - Date format only. Do not include the time format here.
       clearable: true
     }
   })

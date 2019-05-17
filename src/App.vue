@@ -1,8 +1,11 @@
 <template>
-  <div id="app">
-    <VuetifyDate v-model="value" v-bind:label="label" v-bind:config="config" />
-    Parent v-model: {{ value }}
-  </div>
+  <v-app id="inspire">
+    <v-toolbar dark app fixed clipped-left color="cyan"></v-toolbar>
+    <v-content>
+      <VuetifyDate v-model="value" v-bind:label="label" v-bind:config="config" />
+      Parent v-model: {{ value }}
+    </v-content>
+  </v-app>
 </template>
 
 <script>
