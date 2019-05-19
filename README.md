@@ -2,7 +2,6 @@
 
 This component works with vuetify. It uses v-text-field and v-date-picker.
 
-v-text-field
 - 14/05/2019
 - Locale allows you to define other date formats.
 
