@@ -6,17 +6,22 @@ v-text-field
 - 14/05/2019
 - Locale allows you to define other date formats.
 
-v-model parent (input and output in milliseconds)
+v-model parent (milliseconds)
 1557802800000
 
 if you want a datetime component, please, try this:
-https://github.com/juareznasato/vuetify-datetime.git
+<p><a href="https://github.com/juareznasato/vuetify-datetime.git" target="_blank">vuetify-datetime</a></p>
 
 ## Features
 
 - Vuetify dependency
 - moment dependency
 - Works fine with Chrome and Firefox. Others not tested.
+
+## Links
+<p><a href="https://codesandbox.io/s/vuetifydate-46zdr" target="_blank">See DEMO here</a></p>
+<p><a href="https://github.com/juareznasato/vuetify-date" target="_blank">GitHub</a></p>
+<p><a href="https://www.npmjs.com/package/vuetify-date" target="_blank">npm</a></p>
 
 ## Usage
 
@@ -26,10 +31,14 @@ Install:
 $ npm install vuetify-date --save
 
 Register component:
+
+1- Create a src/modules/vuetify-date.js file with the following content:
 import Vue from "vue";
 import VuetifyDate from "vuetify-date";
 Vue.use(VuetifyDate);
 export default VuetifyDate;
+2- Add to src/mains.js file:
+import "./modules/vuetify-date.js";
 
 Parent component:
 <template>
