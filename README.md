@@ -18,7 +18,7 @@ if you want a datetime component, please, try this:
 - Works fine with Chrome and Firefox. Others not tested.
 
 ## Links
-<p><a href="https://codesandbox.io/s/vuetifydate-46zdr" target="_blank">See DEMO here</a></p>
+<p><a href="https://46zdr.codesandbox.io/" target="_blank">See DEMO here</a></p>
 <p><a href="https://github.com/juareznasato/vuetify-date" target="_blank">GitHub</a></p>
 <p><a href="https://www.npmjs.com/package/vuetify-date" target="_blank">npm</a></p>
 
@@ -42,7 +42,7 @@ import "./modules/vuetify-date.js";
 Parent component:
 <template>
   <div>
-    <vuetify-date v-model="value" v-bind:label="label" v-bind:config="config"/>
+    <vuetify-date v-model="value" v-bind:label="label" v-bind:options="options"/>
     v-model parent: {{ value }}
   </div>
 </template>
@@ -51,7 +51,7 @@ export default {
   data: () => ({
     value: "1557802800000",
     label: "Date",
-    config: {
+    options: {
       locale: "pt-BR",
       format: "DD/MM/YYYY",     - Date format only. Do not include the time format here.
       clearable: true
@@ -65,7 +65,7 @@ export default {
 ```
 <template>
   <div>
-    <VuetifyDate v-model="value" v-bind:label="label" v-bind:config="config"/>
+    <VuetifyDate v-model="value" v-bind:label="label" v-bind:options="options"/>
     v-model parent: {{ value }}
   </div>
 </template>
@@ -78,7 +78,7 @@ export default {
   data: () => ({
     value: "1557802800000",
     label: "Date",
-    config: {
+    options: {
       locale: "pt-BR",
       format: "DD/MM/YYYY",     - Date format only. Do not include the time format here.
       clearable: true

@@ -15,7 +15,7 @@
       <v-text-field
         v-model="compShow"
         v-bind:readonly="readonly"
-        v-bind:clearable="config.clearable"
+        v-bind:clearable="options.clearable"
         v-bind:label="label"
         slot="activator"
         prepend-icon="event"
@@ -23,7 +23,7 @@
       <v-date-picker
         v-model="modDate"
         v-on:input="(menu = false), emit()"
-        v-bind:locale="config.locale"
+        v-bind:locale="options.locale"
         no-title
       ></v-date-picker>
     </v-menu>
@@ -44,7 +44,7 @@ export default {
       type: String,
       default: "Label"
     },
-    config: {
+    options: {
       type: Object,
       default: function() {
         return { locale: "pt-BR", format: "DD/MM/YYYY", clearable: false };
@@ -64,7 +64,7 @@ export default {
         const THIS = this;
         return this.value
           ? (THIS.modFormattedDate = moment(new Date(this.value)).format(
-              this.config.format
+              this.options.format
             ))
           : null;
       },
