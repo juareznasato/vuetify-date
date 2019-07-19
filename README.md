@@ -17,7 +17,7 @@ if you want a datetime component, please, try this:
 - moment
 
 ## Links
-<p><a href="https://46zdr.codesandbox.io/" target="_blank">See DEMO here</a></p>
+<p><a href="https://46zdr.codesandbox.io/">See DEMO here</a></p>
 <p><a href="https://github.com/juareznasato/vuetify-date" target="_blank">GitHub</a></p>
 <p><a href="https://www.npmjs.com/package/vuetify-date" target="_blank">npm</a></p>
 
